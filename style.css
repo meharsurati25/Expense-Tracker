@@ -1,0 +1,52 @@
+/* =========================
+GLOBAL RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+PAGE BACKGROUND
+========================= */
+body{
+    background: linear-gradient(135deg, #153677, #4E085F);
+    height:150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+MAIN APP CONTAINER
+========================= */
+.container{
+    background: white;
+    width: 420px;
+    padding:30px;
+    border-radius: 14px;
+    box-shadow: 0 15px rgba(0,0,0,0.15);
+}
+
+/* =========================
+TITLE
+========================= */
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color:#333;
+    letter-spacing: 10px;
+    font-weight: 600px;
+}
+
+/* =========================
+BALANCE SECTION
+========================= */
+.balance_container{
+    background: #f5f5f5;
+    padding:12px;
+    
+
+}

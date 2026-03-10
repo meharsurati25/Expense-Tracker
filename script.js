@@ -5,7 +5,7 @@ let expenses = [];
 const All = document.getElementById("all");
 const Credit = document.getElementById("credit");
 const Debit = document.getElementById("debit");
-const expense_input  = document.getElementById("transaction_input")
+const transaction_input  = document.getElementById("transaction_input")
 
 // Current filter state
 let currentfilter = "all";
@@ -27,5 +27,9 @@ Debit.addEventListener("click", function(){
 
 // Add new transaction
 function add_transaction(){
-    connt
+    const transaction_text = transaction_input.ariaValueMax;
+
+    if(transaction_text === ""){
+        return;
+    }
 }

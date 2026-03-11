@@ -60,6 +60,44 @@ BALANCE SECTION
 }
 
 /* =========================
+ADD TRANSACTION SECTION
+========================= */
+#add_transaction{
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    background:#73c7f4;
+    color: rgb(15, 17, 17);
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#addtask:hover{
+    background:#4592bc;
+}
+
+.transaction_feature{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 13px;
+}
+
+#transaction_input{
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#transaction_input:focus{
+    outline: none;
+    border-color: #64cd67;
+    box-shadow: 0 0 3px rgba(71, 207, 75, 0.4);
+}
+
+/* =========================
 DELETE BUTTON
 ========================= */
 .deletebtn{
@@ -83,10 +121,11 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 8px 12px;
-margin-bottom: 8px;
-background: #f8f8f8;
-border-radius: 6px;
+margin-bottom: 10px;
+background: #f5f5f5;
+border-radius: 8px;
 font-weight: 600;
+gap: 8px;
 }
 
 #expense_list{
@@ -98,6 +137,7 @@ font-weight: 600;
 Credit transaction */
 .credit{
 color: #1db954; /* green text */
+font-weight: bold;
 }
 
 li.credit{
@@ -107,6 +147,7 @@ border-left: 4px solid #1db954; /* green side bar */
 /* Debit transaction*/
 .debit{
 color: #e63946; /* red text */
+font-weight: bold;
 }
 
 li.debit{

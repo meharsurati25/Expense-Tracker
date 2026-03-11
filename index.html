@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Expense Tracker</title>
-        <link rel="stylesheet" href="Expense Tracker\style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="container">
@@ -15,7 +15,11 @@
 
             <div class="transaction">
                 <button id="add_transaction">Add Transcation</button>
-                <input type="text" placeholder="Enter Transcation" id="transaction_input">
+                <div id = "transaction_feature" class="hidden">
+                    <input type="text" placeholder="Enter Transcation" id="transaction_input">
+                    <button id = "credit_trans">Credit</button>
+                    <button id = "debit_trans">Debit</button>
+                </div>
             </div>
 
             <div class="filters">

@@ -38,7 +38,6 @@ add_transaction_btn.addEventListener("click", function () {
 // ===============================
 All.addEventListener("click", function () {
     currentfilter = "all";
-    setActiveButton(this);
     render_transaction();
 });
 
@@ -147,12 +146,18 @@ function render_transaction(){
     expense_list.innerHTML = "";
 
     expenses.forEach(function(expense){
-        if(currentfilter === "credit" && expense.sign !== "credit"){
+        if(currentfilter == "all"){
+            create_transaction_element(expense);
             return;
         }
+        else{
+            if(currentfilter === "credit" && expense.sign !== "credit"){
+                return;
+            }
 
-        if(currentfilter === "debit" && expense.sign !== "debit"){
-            return;
+            if(currentfilter === "debit" && expense.sign !== "debit"){
+                return;
+            }
         }
 
         create_transaction_element(expense);
@@ -170,5 +175,5 @@ function calc_balance(){
         }
     })
 
-    balance_span.textContent = "Balance: " + balance;
+    balance_span.textContent = `Balance: ₹${balance}`;
 }

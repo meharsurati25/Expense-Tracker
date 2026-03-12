@@ -3,26 +3,28 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    gap:10px;
 }
 
-.filters button{
-    padding: 7px 14px;
-    border: none;
-    border-radius: 15px;
-    background:#e0e0e0;
-    cursor: pointer;
-    transition: 0.2s;
-    font-size: 16px;
+.filter-btn{
+    padding:6px 14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#e5e7eb;
+    color:#333;
+    font-weight:500;
+    transition:all 0.5s ease;
 }
 
-.filters button.active{
-    background:#4CAF50;
-    color: black;
-    font-weight:bold;
-    box-shadow:0 3px 8px rgba(0,0,0,0.15);
-    transform: translateY(-3px);
+/* active button */
+.filter-btn-active{
+    background: rgb(45, 168, 45);
+    color:white;
+    font-weight:600;
 }
 
-.filters button:hover{
-    transform: translateY(-2px);
+/* hover effect */
+.filter-btn:hover{
+    transform:translateY(-2px);
 }

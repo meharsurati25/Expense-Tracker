@@ -20,7 +20,7 @@ const transaction_input = document.getElementById("transaction_input");
 const cross = document.getElementById("cross");
 const credit_trans = document.getElementById("credit_trans");
 const debit_trans = document.getElementById("debit_trans");
-
+const category_input = document.getElementById("category_input")
 // ===============================
 // Current filter state
 // ===============================
@@ -38,22 +38,35 @@ add_transaction_btn.addEventListener("click", function () {
 // ===============================
 All.addEventListener("click", function () {
     currentfilter = "all";
+    setfilteractive(All);
     render_transaction();
 });
 
 Credit.addEventListener("click", function () {
     currentfilter = "credit";
+    setfilteractive(Credit);
     render_transaction();
 });
 
 Debit.addEventListener("click", function () {
     currentfilter = "debit";
+    setfilteractive(Debit);
     render_transaction();
 });
 
 cross.addEventListener("click", function(){
     transaction_feature.classList.toggle("hidden");
 })
+
+// set filter active
+function setfilteractive(button){
+    document.querySelectorAll(".filter-btn").forEach(btn=>{
+        btn.classList.remove("filter-btn-active");
+        btn.classList.add("filter-btn");
+    });
+
+    button.classList.add("filter-btn-active");
+}
 
 load_transactions();
 
@@ -71,61 +84,77 @@ debit_trans.addEventListener("click", function () {
 // ===============================
 // Create a new transaction
 // ===============================
-function create_transaction(type) {
+function create_transaction(type){
 
-const transaction_text = transaction_input.value;
+    const amount = Number(transaction_input.value);
+    const category = category_input.value;
 
-    // Prevent empty input
-    if (transaction_text === "") {
+    if(!amount){
         return;
     }
 
-    // Create transaction object
     const expense = {
-        amount: transaction_text,
-        sign: type
+        id: Date.now(),
+        amount: amount,
+        sign: type,
+        category: category,
+        date: new Date().toLocaleString()
     };
 
     expenses.push(expense);
+
+    transaction_input.value = "";
+
     save_transaction();
     render_transaction();
     calc_balance();
-
 }
 
 function create_transaction_element(expense){
+
     const expense_item = document.createElement("li");
 
-    const expense_span = document.createElement("span");
-    expense_span.textContent = expense.amount;
+    const info = document.createElement("div");
+    info.classList.add("transaction-info");
 
-    if(expense.sign == "credit"){
-        expense_span.classList.remove("debit");
-        expense_span.classList.add("credit");
+    const amount = document.createElement("span");
+    amount.textContent =
+        (expense.sign === "credit" ? "+ ₹" : "- ₹") + expense.amount;
+
+    if(expense.sign === "credit"){
+        amount.classList.add("credit");
+    } else {
+        amount.classList.add("debit");
     }
-    else{
-        expense_span.classList.remove("credit");
-        expense_span.classList.add("debit");
-    }
+
+    const category = document.createElement("p");
+    category.textContent = expense.category;
+
+    const date = document.createElement("small");
+    date.textContent = expense.date;
+
+    info.appendChild(amount);
+    info.appendChild(category);
+    info.appendChild(date);
 
     const deletebtn = document.createElement("button");
     deletebtn.textContent = "Delete";
     deletebtn.classList.add("deleteBtn");
 
-    // delete expense
     deletebtn.addEventListener("click", function(){
-        expenses = expenses.filter(t => t !== expense);
+
+        expenses = expenses.filter(t => t.id !== expense.id);
 
         save_transaction();
         render_transaction();
         calc_balance();
-    })
 
-    expense_item.appendChild(expense_span);
+    });
+
+    expense_item.appendChild(info);
     expense_item.appendChild(deletebtn);
 
     expense_list.appendChild(expense_item);
-
 }
 
 function save_transaction(){

@@ -30,7 +30,7 @@ let currentfilter = "all";
 // Show / Hide transaction input
 // ===============================
 add_transaction_btn.addEventListener("click", function () {
-transaction_feature.classList.toggle("hidden");
+    transaction_feature.classList.toggle("hidden");
 });
 
 // ===============================

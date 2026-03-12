@@ -1,0 +1,43 @@
+/* =========================
+ADD TRANSACTION SECTION
+========================= */
+#add_transaction{
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    background:#73c7f4;
+    color: rgb(15, 17, 17);
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#add_transaction:hover{
+    background:#8cd7ff;
+}
+
+.transaction{
+    margin-top: 20px;
+}
+
+#transaction_feature{
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+#transaction_input{
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#transaction_input:focus{
+    outline: none;
+    border-color: #64cd67;
+    box-shadow: 0 0 3px rgba(71, 207, 75, 0.4);
+}

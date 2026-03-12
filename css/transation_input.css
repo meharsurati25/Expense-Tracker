@@ -14,6 +14,12 @@
 /* =========================
 ADD TRANSACTION SECTION
 ========================= */
+
+.transaction{
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
 #add_transaction{
     border: none;
     border-radius: 6px;

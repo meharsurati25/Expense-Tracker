@@ -2,4 +2,15 @@
 .filters{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+#all{
+    padding: 6px 4px;
+    border: none;
+    border-radius: 6px;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 13px;
 }

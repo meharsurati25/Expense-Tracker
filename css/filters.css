@@ -2,15 +2,27 @@
 .filters{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 13px;
+    margin-bottom: 15px;
 }
 
-#all{
-    padding: 6px 4px;
+.filters button{
+    padding: 7px 14px;
     border: none;
-    border-radius: 6px;
-    background: #e0e0e0;
+    border-radius: 15px;
+    background:#e0e0e0;
     cursor: pointer;
     transition: 0.2s;
-    font-size: 13px;
+    font-size: 16px;
+}
+
+.filters button.active{
+    background:#4CAF50;
+    color: black;
+    font-weight:bold;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+
+.filters button:hover{
+    transform: translateY(-2px);
 }

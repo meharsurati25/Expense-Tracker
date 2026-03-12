@@ -40,9 +40,15 @@ ADD TRANSACTION SECTION
 #transaction_input{
     flex: 1;
     padding: 6px;
-    border: 1px solid #ccc;
+    border: 1.3px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+}
+
+#transaction_input:focus{
+    outline: none;
+    border-color: #64cd67;
+    box-shadow: 0 0 5px rgba(71, 207, 75, 0.4);
 }
 
 .input_container{
@@ -59,12 +65,14 @@ ADD TRANSACTION SECTION
 
 .category_credit select{
     padding: 8px;
+    width: 140px;
     border-radius: 8px;
     border: 2px solid #4b4848;
     font-size: 14px;
     cursor: pointer;
     background: white;
     height: 40px;
+    transition: 0.3s;
 }
 
 .category_credit select:hover{
@@ -75,12 +83,6 @@ ADD TRANSACTION SECTION
     border-color: #4CAF50;
     box-shadow: 0 0 4px rgba(76, 175, 80, 0.4);
     outline: none;
-}
-
-#transaction_input:focus{
-    outline: none;
-    border-color: #64cd67;
-    box-shadow: 0 0 3px rgba(71, 207, 75, 0.4);
 }
 
 /* transition info */

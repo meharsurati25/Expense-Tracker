@@ -1,6 +1,12 @@
 /* =========================
 ADD TRANSACTION SECTION
 ========================= */
+
+.transaction{
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
 #add_transaction{
     border: none;
     border-radius: 6px;
@@ -14,10 +20,6 @@ ADD TRANSACTION SECTION
 
 #add_transaction:hover{
     background:#8cd7ff;
-}
-
-.transaction{
-    margin-top: 20px;
 }
 
 #transaction_feature{
@@ -40,4 +42,34 @@ ADD TRANSACTION SECTION
     outline: none;
     border-color: #64cd67;
     box-shadow: 0 0 3px rgba(71, 207, 75, 0.4);
+}
+
+#credit_trans{
+    padding: 5px 8px;
+    background: #36c63bd2;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#credit_trans:hover{
+    background: #228c26d2;
+}
+
+#debit_trans{
+    padding: 5px 8px;
+    background: rgb(224, 53, 34);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#debit_trans:hover{
+    background: rgb(176, 25, 8);
 }

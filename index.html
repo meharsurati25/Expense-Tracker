@@ -5,8 +5,11 @@
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/filters.css">
         <link rel="stylesheet" href="css/transation_input.css">
+        <link rel="stylesheet" href="css/transation_input.css">
+        <link rel="stylesheet" href="css/list.css">
     </head>
     <body>
+        <!-- container -->
         <div class="container">
             <div class="title">
                 <h1>Expense Tracker</h1>
@@ -16,21 +19,27 @@
                 <span id="balance">Balance :</span>
             </div>
 
+            <!-- transaction input -->
             <div class="transaction">
-                <button id="add_transaction">Add Transcation</button>
+                <div class="transaction_btn">
+                    <button id="add_transaction">Add Transcation</button>
+                </div>
                 <div id = "transaction_feature" class="hidden">
                     <input type="text" placeholder="Enter Transcation" id="transaction_input">
                     <button id = "credit_trans">Credit</button>
                     <button id = "debit_trans">Debit</button>
+                    <button id="cross">x</button>
                 </div>
             </div>
 
+            <!-- filters -->
             <div class="filters">
                 <button id="all">All</button>
                 <button id="credit">Credit</button>
                 <button id="debit">Debit</button>
             </div>
-           
+            
+            <!-- list -->
             <ul id="expense_list">
             </ul>
 

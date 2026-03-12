@@ -17,7 +17,7 @@ const Credit = document.getElementById("credit");
 const Debit = document.getElementById("debit");
 
 const transaction_input = document.getElementById("transaction_input");
-
+const cross = document.getElementById("cross");
 const credit_trans = document.getElementById("credit_trans");
 const debit_trans = document.getElementById("debit_trans");
 
@@ -51,6 +51,10 @@ Debit.addEventListener("click", function () {
     currentfilter = "debit";
     render_transaction();
 });
+
+cross.addEventListener("click", function(){
+    transaction_feature.classList.toggle("hidden");
+})
 
 load_transactions();
 

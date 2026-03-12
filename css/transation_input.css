@@ -1,3 +1,16 @@
+/* tranction section */
+.transaction{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(249, 249, 249);
+}
+
+/* transaction buttons */
+.transaction_btn{
+    display: flex;
+    justify-content: space-between;
+}
+
 /* =========================
 ADD TRANSACTION SECTION
 ========================= */
@@ -14,10 +27,6 @@ ADD TRANSACTION SECTION
 
 #add_transaction:hover{
     background:#8cd7ff;
-}
-
-.transaction{
-    margin-top: 20px;
 }
 
 #transaction_feature{
@@ -40,4 +49,31 @@ ADD TRANSACTION SECTION
     outline: none;
     border-color: #64cd67;
     box-shadow: 0 0 3px rgba(71, 207, 75, 0.4);
+}
+
+#cross{
+    width:28px;
+    height:28px;
+    border:none;
+    border-radius:50%;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top: 2px;
+
+    /* colorful gradient */
+    background: rgb(255, 77, 0);
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* hover animation */
+#cross:hover{
+    transform: scale(1.15) rotate(90deg);
+    box-shadow:0 4px 10px rgba(0,0,0,0.25);
 }

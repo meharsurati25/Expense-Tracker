@@ -37,11 +37,9 @@ ADD TRANSACTION SECTION
 }
 
 #transaction_feature{
-    display: flex;
     gap: 8px;
     margin-top: 5px;
     margin-bottom: 20px;
-    justify-content: space-between;
 }
 
 #transaction_input{
@@ -52,10 +50,33 @@ ADD TRANSACTION SECTION
     font-size: 15px;
 }
 
+.input_container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.category_credit{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
 #transaction_input:focus{
     outline: none;
     border-color: #64cd67;
     box-shadow: 0 0 3px rgba(71, 207, 75, 0.4);
+}
+
+/* transition info */
+.transaction-info{
+    display:flex;
+    flex-direction:column;
+}
+
+.transaction-info small{
+    color:#888;
+    font-size:12px;
 }
 
 #cross{

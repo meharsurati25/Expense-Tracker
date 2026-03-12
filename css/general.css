@@ -23,8 +23,11 @@ body{
 MAIN APP CONTAINER
 ========================= */
 .container{
+    display: flex;
+    flex-direction: column;
     background: white;
     width: 420px;
+    max-height: 95vh;
     padding:30px;
     border-radius: 14px;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.9);
@@ -35,18 +38,29 @@ TITLE
 ========================= */
 h1{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     color:#333;
-    letter-spacing: 10px;
+    letter-spacing: 2px;
     font-weight: 600px;
+}
+
+.subtitle{
+    color: #777;
+    font-size: 12px;
+    margin-top: -12px;
+    margin-bottom: 5px;
 }
 
 /* =========================
 BALANCE SECTION
 ========================= */
 .balance_container{
-    background: #f5f5f5;
-    padding:12px;
+    background: white;
+    padding:8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    font-size: 18px;
+    font-weight: 700;
 }
 
 #transaction_feature.hidden{

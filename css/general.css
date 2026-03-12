@@ -26,7 +26,7 @@ MAIN APP CONTAINER
     display: flex;
     flex-direction: column;
     background: white;
-    width: 420px;
+    width: 480px;
     max-height: 95vh;
     padding:30px;
     border-radius: 14px;

@@ -15,7 +15,7 @@
     font-size: 16px;
 }
 
-.filters button.active{
+.filters button:active{
     background:#4CAF50;
     color: black;
     font-weight:bold;

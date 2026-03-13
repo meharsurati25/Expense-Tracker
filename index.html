@@ -33,11 +33,18 @@
                     <div class="category_credit">
                         <select id="category_input">
                         <option value="" disabled selected>Select Category</option>
-                        <option value="Food">Food</option>
-                        <option value="Transport">Transport</option>
-                        <option value="Shopping">Shopping</option>
-                        <option value="Bills">Bills</option>
-                        <option value="Other">Other</option>
+                        <optgroup label="Credit">
+                            <option value="Income">Income</option>
+                            <option value="Bonus">Bonus</option>
+                            <option value="Miscellaneous">Miscellaneous </option>
+                        </optgroup>
+                        <optgroup label="Debit">
+                            <option value="Food">Food</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Bills">Bills</option>
+                            <option value="Other">Other</option>
+                        </optgroup>
                     </select>
                         <button id = "credit_trans">Credit</button>
                         <button id = "debit_trans">Debit</button>
